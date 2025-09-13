@@ -13,229 +13,442 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.7;
+            color: #1a202c;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px 0;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            padding: 0 20px;
+        }
+
+        .header-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .header-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
         }
 
         h1 {
-            color: #4CAF50;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 20px;
-            text-align: center;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #4CAF50;
-        }
-
-        h2 {
-            color: #2E7D32;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            padding-left: 10px;
-            border-left: 4px solid #4CAF50;
-        }
-
-        h3 {
-            color: #388E3C;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-
-        ul {
-            margin-bottom: 15px;
-            padding-left: 30px;
-        }
-
-        li {
-            margin-bottom: 8px;
+            letter-spacing: -0.02em;
         }
 
         .app-info {
-            background-color: #E8F5E8;
-            padding: 20px;
-            border-radius: 8px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
             margin-bottom: 30px;
-            border-left: 5px solid #4CAF50;
+            box-shadow: 0 10px 30px rgba(245, 87, 108, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .section-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #4a5568;
+            margin: 25px 0 15px 0;
+        }
+
+        p {
+            color: #718096;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        ul {
+            margin-bottom: 20px;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 12px;
+            padding: 12px 18px;
+            background: #f8fafc;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: all 0.2s ease;
+            color: #4a5568;
+        }
+
+        li:hover {
+            background: #edf2f7;
+            transform: translateX(5px);
+        }
+
+        li strong {
+            color: #2d3748;
         }
 
         .highlight {
-            background-color: #FFF3E0;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #FF9800;
-            margin: 20px 0;
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 25px rgba(250, 177, 160, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ffeaa7, #fab1a0);
+        }
+
+        .highlight strong {
+            color: #d63031;
+            font-weight: 700;
         }
 
         .contact-info {
-            background-color: #E3F2FD;
-            padding: 20px;
-            border-radius: 8px;
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
             margin-top: 30px;
-            border-left: 5px solid #2196F3;
+            box-shadow: 0 15px 35px rgba(9, 132, 227, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-info h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+        }
+
+        .contact-info li {
+            background: rgba(255, 255, 255, 0.1);
+            border-left-color: rgba(255, 255, 255, 0.5);
+            color: white;
+        }
+
+        .contact-info li:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-info a {
+            color: #ffeaa7;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .contact-info a:hover {
+            color: white;
         }
 
         .footer {
             text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            color: #666;
-            font-size: 14px;
+            margin-top: 50px;
+            padding: 30px 0;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+            color: rgba(255, 255, 255, 0.8);
         }
 
         @media (max-width: 768px) {
+            body {
+                padding: 10px 0;
+            }
+
             .container {
-                margin: 10px;
-                padding: 15px;
-                border-radius: 0;
+                padding: 0 15px;
             }
-            
+
+            .header-card {
+                padding: 30px 20px;
+                margin-bottom: 20px;
+            }
+
             h1 {
-                font-size: 24px;
+                font-size: 2rem;
             }
-            
+
+            .section-card {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
             h2 {
-                font-size: 20px;
+                font-size: 1.5rem;
             }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            .app-info {
+                padding: 20px;
+            }
+
+            .highlight {
+                padding: 20px;
+            }
+
+            .contact-info {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .header-card {
+                padding: 25px 15px;
+            }
+
+            .section-card {
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            li {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #5a67d8, #6b46c1);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🏳️ Privacy Policy - Flag Master</h1>
-        
-        <div class="app-info">
-            <strong>Application:</strong> Flag Master<br>
-            <strong>Package Name:</strong> com.flagmaster.app<br>
-            <strong>Developer:</strong> NovaOrion7<br>
-            <strong>Last Updated:</strong> September 13, 2025
+        <div class="header-card">
+            <h1>🏳️ Privacy Policy - Flag Master</h1>
+            
+            <div class="app-info">
+                <strong>Application:</strong> Flag Master<br>
+                <strong>Developer:</strong> Nova Orion<br>
+                <strong>Last Updated:</strong> September 13, 2025
+            </div>
         </div>
 
-        <h2>🛡️ Our Commitment to Privacy</h2>
-        <p>
-            At Flag Master, we take your privacy seriously. This Privacy Policy explains how our educational geography application handles information when you use our app. The simple answer is: <strong>we don't collect, store, or share any of your personal data</strong>.
-        </p>
+        <div class="section-card">
+            <h2>🛡️ Our Commitment to Privacy</h2>
+            <p>
+                At Flag Master, we take your privacy seriously. This Privacy Policy explains how our educational geography application handles information when you use our app. The simple answer is: <strong>we don't collect, store, or share any of your personal data</strong>.
+            </p>
 
-        <div class="highlight">
-            <strong>🔒 Privacy Promise:</strong> Flag Master is designed to be completely private. Your learning progress, quiz results, and app usage remain entirely on your device.
+            <div class="highlight">
+                <strong>🔒 Privacy Promise:</strong> Flag Master is designed to be completely private. Your learning progress, quiz results, and app usage remain entirely on your device.
+            </div>
         </div>
 
-        <h2>📱 Information We Do NOT Collect</h2>
-        <p>Flag Master does not collect any of the following information:</p>
-        <ul>
-            <li><strong>Personal Information:</strong> Names, email addresses, phone numbers, or any identifying information</li>
-            <li><strong>Device Information:</strong> Device IDs, advertising IDs, or hardware specifications</li>
-            <li><strong>Location Data:</strong> GPS coordinates, location history, or geographic information</li>
-            <li><strong>Usage Analytics:</strong> App usage patterns, feature interactions, or behavioral data</li>
-            <li><strong>Performance Data:</strong> Crash reports, error logs, or diagnostic information</li>
-            <li><strong>Quiz Results:</strong> Your scores, learning progress, or quiz performance</li>
-            <li><strong>User-Generated Content:</strong> No content is uploaded or shared from the app</li>
-        </ul>
-
-        <h2>🏠 Local Data Storage</h2>
-        <p>
-            All data in Flag Master is stored locally on your device, including:
-        </p>
-        <ul>
-            <li><strong>Language Preferences:</strong> Your selected language (Turkish/English)</li>
-            <li><strong>Quiz Progress:</strong> Your learning history and statistics</li>
-            <li><strong>App Settings:</strong> Theme preferences and configuration options</li>
-            <li><strong>Country Data:</strong> Educational content about flags, capitals, and geography</li>
-        </ul>
-        <p>
-            This data never leaves your device and is automatically deleted when you uninstall the app.
-        </p>
-
-        <h2>🌐 Network Access</h2>
-        <p>
-            While Flag Master requests internet permission in its manifest file, this is only included for potential future updates. Currently:
-        </p>
-        <ul>
-            <li>The app works completely offline</li>
-            <li>No network requests are made during normal operation</li>
-            <li>No data is transmitted to external servers</li>
-            <li>All educational content is bundled with the app</li>
-        </ul>
-
-        <h2>🔒 Security Measures</h2>
-        <p>
-            Since we don't collect any data, there's no risk of data breaches involving your personal information. However, we still implement security best practices:
-        </p>
-        <ul>
-            <li>App code follows secure development guidelines</li>
-            <li>Local data storage uses device-level security</li>
-            <li>No external APIs or third-party services are used</li>
-            <li>Regular security reviews of app architecture</li>
-        </ul>
-
-        <h2>👶 Children's Privacy</h2>
-        <p>
-            Flag Master is designed as an educational tool suitable for all ages, including children under 13. Since we don't collect any personal information, we comply with children's privacy regulations including:
-        </p>
-        <ul>
-            <li><strong>COPPA (Children's Online Privacy Protection Act):</strong> No personal information collection from children</li>
-            <li><strong>GDPR Article 8:</strong> No processing of children's personal data</li>
-            <li><strong>Local Privacy Laws:</strong> Compliance with regional children's privacy requirements</li>
-        </ul>
-
-        <div class="highlight">
-            <strong>👨‍👩‍👧‍👦 Parents:</strong> You can confidently let your children use Flag Master knowing that no personal information is collected or shared.
+        <div class="section-card">
+            <h2>📱 Information We Do NOT Collect</h2>
+            <p>Flag Master does not collect any of the following information:</p>
+            <ul>
+                <li><strong>Personal Information:</strong> Names, email addresses, phone numbers, or any identifying information</li>
+                <li><strong>Device Information:</strong> Device IDs, advertising IDs, or hardware specifications</li>
+                <li><strong>Location Data:</strong> GPS coordinates, location history, or geographic information</li>
+                <li><strong>Usage Analytics:</strong> App usage patterns, feature interactions, or behavioral data</li>
+                <li><strong>Performance Data:</strong> Crash reports, error logs, or diagnostic information</li>
+                <li><strong>Quiz Results:</strong> Your scores, learning progress, or quiz performance</li>
+                <li><strong>User-Generated Content:</strong> No content is uploaded or shared from the app</li>
+            </ul>
         </div>
 
-        <h2>📊 Third-Party Services</h2>
-        <p>
-            Flag Master does not integrate with any third-party services that collect data, including:
-        </p>
-        <ul>
-            <li>No advertising networks</li>
-            <li>No analytics services (Google Analytics, Firebase, etc.)</li>
-            <li>No social media integrations</li>
-            <li>No cloud storage services</li>
-            <li>No payment processors (app is completely free)</li>
-        </ul>
+        <div class="section-card">
+            <h2>🏠 Local Data Storage</h2>
+            <p>
+                All data in Flag Master is stored locally on your device, including:
+            </p>
+            <ul>
+                <li><strong>Language Preferences:</strong> Your selected language (Turkish/English)</li>
+                <li><strong>Quiz Progress:</strong> Your learning history and statistics</li>
+                <li><strong>App Settings:</strong> Theme preferences and configuration options</li>
+                <li><strong>Country Data:</strong> Educational content about flags, capitals, and geography</li>
+            </ul>
+            <p>
+                This data never leaves your device and is automatically deleted when you uninstall the app.
+            </p>
+        </div>
 
-        <h2>🔄 Changes to This Policy</h2>
-        <p>
-            If we ever change our privacy practices (which is unlikely given our privacy-first approach), we will:
-        </p>
-        <ul>
-            <li>Update this privacy policy</li>
-            <li>Change the "Last Updated" date</li>
-            <li>Notify users through app store updates</li>
-            <li>Maintain our commitment to user privacy</li>
-        </ul>
+        <div class="section-card">
+            <h2>🌐 Network Access</h2>
+            <p>
+                While Flag Master requests internet permission in its manifest file, this is only included for potential future updates. Currently:
+            </p>
+            <ul>
+                <li>The app works completely offline</li>
+                <li>No network requests are made during normal operation</li>
+                <li>No data is transmitted to external servers</li>
+                <li>All educational content is bundled with the app</li>
+            </ul>
+        </div>
 
-        <h2>⚖️ Legal Basis for Processing</h2>
-        <p>
-            Since Flag Master doesn't process any personal data, no legal basis for data processing is required. The app operates entirely within the scope of providing educational content without data collection.
-        </p>
+        <div class="section-card">
+            <h2>🔒 Security Measures</h2>
+            <p>
+                Since we don't collect any data, there's no risk of data breaches involving your personal information. However, we still implement security best practices:
+            </p>
+            <ul>
+                <li>App code follows secure development guidelines</li>
+                <li>Local data storage uses device-level security</li>
+                <li>No external APIs or third-party services are used</li>
+                <li>Regular security reviews of app architecture</li>
+            </ul>
+        </div>
 
-        <h2>🌍 International Users</h2>
-        <p>
-            Flag Master's privacy-first approach ensures compliance with international privacy laws, including:
-        </p>
-        <ul>
-            <li><strong>GDPR (European Union):</strong> No personal data processing</li>
-            <li><strong>CCPA (California):</strong> No personal information collection</li>
-            <li><strong>PIPEDA (Canada):</strong> No personal information handling</li>
-            <li><strong>Local Privacy Laws:</strong> Compliance through non-collection approach</li>
-        </ul>
+        <div class="section-card">
+            <h2>👶 Children's Privacy</h2>
+            <p>
+                Flag Master is designed as an educational tool suitable for all ages, including children under 13. Since we don't collect any personal information, we comply with children's privacy regulations including:
+            </p>
+            <ul>
+                <li><strong>COPPA (Children's Online Privacy Protection Act):</strong> No personal information collection from children</li>
+                <li><strong>GDPR Article 8:</strong> No processing of children's personal data</li>
+                <li><strong>Local Privacy Laws:</strong> Compliance with regional children's privacy requirements</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>👨‍👩‍👧‍👦 Parents:</strong> You can confidently let your children use Flag Master knowing that no personal information is collected or shared.
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2>📊 Third-Party Services</h2>
+            <p>
+                Flag Master does not integrate with any third-party services that collect data, including:
+            </p>
+            <ul>
+                <li>No advertising networks</li>
+                <li>No analytics services (Google Analytics, Firebase, etc.)</li>
+                <li>No social media integrations</li>
+                <li>No cloud storage services</li>
+                <li>No payment processors (app is completely free)</li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <h2>🔄 Changes to This Policy</h2>
+            <p>
+                If we ever change our privacy practices (which is unlikely given our privacy-first approach), we will:
+            </p>
+            <ul>
+                <li>Update this privacy policy</li>
+                <li>Change the "Last Updated" date</li>
+                <li>Notify users through app store updates</li>
+                <li>Maintain our commitment to user privacy</li>
+            </ul>
+        </div>        <div class="section-card">
+            <h2>⚖️ Legal Basis for Processing</h2>
+            <p>
+                Since Flag Master doesn't process any personal data, no legal basis for data processing is required. The app operates entirely within the scope of providing educational content without data collection.
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2>🌍 International Users</h2>
+            <p>
+                Flag Master's privacy-first approach ensures compliance with international privacy laws, including:
+            </p>
+            <ul>
+                <li><strong>GDPR (European Union):</strong> No personal data processing</li>
+                <li><strong>CCPA (California):</strong> No personal information collection</li>
+                <li><strong>PIPEDA (Canada):</strong> No personal information handling</li>
+                <li><strong>Local Privacy Laws:</strong> Compliance through non-collection approach</li>
+            </ul>
+        </div>
 
         <div class="contact-info">
             <h2>📞 Contact Information</h2>
@@ -243,9 +456,7 @@
                 If you have any questions about this Privacy Policy or Flag Master's privacy practices, please contact us:
             </p>
             <ul>
-                <li><strong>GitHub:</strong> <a href="https://github.com/NovaOrion7">@NovaOrion7</a></li>
-                <li><strong>Repository:</strong> <a href="https://github.com/NovaOrion7/flag_master">Flag Master Project</a></li>
-                <li><strong>Issues:</strong> <a href="https://github.com/NovaOrion7/flag_master/issues">Report Issues</a></li>
+                <li><strong>Email:</strong> <a href="mailto:nova.orion.dev@gmail.com">nova.orion.dev@gmail.com</a></li>
             </ul>
         </div>
 
